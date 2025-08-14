@@ -1,0 +1,57 @@
+# User type
+type User {
+  _id: ID!
+  name: String!
+  email: String!
+  password: String!
+  phone: String
+  role: String!
+  createdAt: String
+}
+
+# Input for creating a user
+input CreateUserInput {
+  name: String!
+  email: String!
+  password: String!
+  phone: String
+  role: String
+}
+
+# Queries
+type Query {
+  users: [User!]!
+  user(id: ID!): User
+}
+
+# Mutations
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+}
+
+
+
+# # Types
+# type Post {
+#   _id: ID!
+#   title: String!
+#   content: String!
+#   createdAt: String
+#   updatedAt: String
+# }
+
+# # Input for creating a post
+# input CreatePostInput {
+#   title: String!
+#   content: String!
+# }
+
+# # Queries
+# type Query {
+#   posts: [Post!]!
+# }
+
+# # Mutations
+# type Mutation {
+#   createPost(input: CreatePostInput!): Post!
+# }
